@@ -1,5 +1,4 @@
 html {
-  font-family: sans-serif;
   --primary-color: #2f80ed;
   --secondary-color: #333333;
   --bg-color: #ffffff;
@@ -13,12 +12,14 @@ html[data-theme="dark"] {
 
 html.transition,
 html.transition * {
+  -webkit-transition: all 750ms !important;
   transition: all 750ms !important;
-  transition-delay: 0 !important;
+  -webkit-transition-delay: 0 !important;
+          transition-delay: 0 !important;
 }
 
 body {
-  background-image: url(../img/workPlace.jpg);
+  background: url(workPlace.jpg);
 }
 
 * {
@@ -34,6 +35,7 @@ h2 {
   color: var(--secondary-color);
   font-size: 1em;
 }
+
 h3 {
   color: var(--primary-color);
 }
@@ -49,9 +51,15 @@ a {
 
 header {
   padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: var(--bg-color);
 }
 
@@ -71,22 +79,28 @@ header {
 }
 
 .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+}
 
-  &__type {
-    min-width: 90px;
-  }
+.contact__type {
+  min-width: 90px;
 }
 
 .experience {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  &__date {
-    min-width: 185px;
-  }
-  &__name {
-    font-weight: bold;
-    padding-bottom: 1em;
-  }
+}
+
+.experience__date {
+  min-width: 185px;
+}
+
+.experience__name {
+  font-weight: bold;
+  padding-bottom: 1em;
 }
 
 @media (max-width: 575px) {
@@ -96,9 +110,14 @@ header {
 }
 
 .theme-switch-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .theme-switch {
   display: inline-block;
   height: 34px;
@@ -118,6 +137,7 @@ header {
   position: absolute;
   right: 0;
   top: 0;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -128,6 +148,7 @@ header {
   height: 26px;
   left: 4px;
   position: absolute;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
   width: 26px;
 }
@@ -137,7 +158,8 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  -webkit-transform: translateX(26px);
+          transform: translateX(26px);
 }
 
 .slider.round {
@@ -147,3 +169,4 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+/*# sourceMappingURL=style.css.map */
