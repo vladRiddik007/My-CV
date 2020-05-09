@@ -12,7 +12,7 @@
       <header>
         <div>
           <h1>Vladyslav Sidikov</h1>
-          <h2>Front End Developer</h2>
+          <h2>Junior Front End Developer</h2>
         </div>
 
         <div class="theme-switch-wrapper">
@@ -45,13 +45,25 @@
               >
             </div>
           </div>
+          <div class="contact">
+            <div class="contact__type">
+              LinkedIn:
+            </div>
+            <div class="contact__value">
+              <a
+                href="https://www.linkedin.com/in/vladyslav-sidikov-7425a019b"
+                target="_blank"
+                >https://www.linkedin.com/in/vladyslav-sidikov</a
+              >
+            </div>
+          </div>
         </div>
         <div class="description">
-          I am a <b>Front-end developer</b> with 0.5 years of experience. I have
-          experience in JavaScript, CSS, HTML and React with Redux. I’m always
-          working on updating my skills. I like learning, I`m a hard-working
-          person without bad habits. I found myself in reading books, doing
-          sports and travelling.
+          I am a <b>Front-end developer</b> with 0.5 years of experience. My
+          core competency lies in developing web applications using JS
+          technologies.I’m always working on updating my skills. I like
+          learning, I`m a hard-working person without bad habits. I found myself
+          in reading books, doing sports and travelling.
         </div>
       </section>
 
@@ -77,9 +89,7 @@
             </div>
           </div>
         </div>
-      </main>
 
-      <footer class="section">
         <h3>My Skills</h3>
         <div>
           <ul>
@@ -95,9 +105,73 @@
             <li>Figma</li>
           </ul>
         </div>
-      </footer>
+
+        <h3>Education</h3>
+        <div class="description">
+          Ukrainian State University of Railway Transport (Kharkov, Ukraine)
+          <br />
+          Electrical systems and complexes of vehicles, Specialist
+        </div>
+
+        <h3>Languages</h3>
+        <div>
+          <ul>
+            <li>English - pre-intermediate</li>
+            <li>Ukrainian – native</li>
+            <li>Russian - native</li>
+          </ul>
+        </div>
+      </main>
+
+      <!-- <div> -->
+        <!-- <h1 id="description"></h1>
+        <ul>
+          <button onclick="toggleLanguage('English')">En</button>
+          <button onclick="toggleLanguage('Korean')">Ru</button>
+        </ul> -->
+
+        <!-- <a href="#eng" data-reload>EN</a>
+        <a href="#es" data-reload>RU</a>
+        <p id="hi">Welcome</p> -->
+
+      <!-- </div> -->
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+
+      //===========================================
+      var dataReload = document.querySelectorAll("[data-reload]");
+
+      var language = {
+        eng: {
+          welcome: 'welcome'
+        },
+        es: {
+          welcome: 'Добро'
+        }
+      };
+
+      if (window.location.hash) {
+        if (window.location.hash === "/#es") {
+          hi.textContent = language.es.welcome;
+        }
+      }
+
+      for (i = 0; i <= dataReload.length; i++) {
+        dataReload[i].onclick = function() {
+          location.reload(true);
+        };
+      }
+      //===========================================
+      // function toggleLanguage(language) {
+      //   let description = document.getElementById("description");
+      //   if (language === "Korean") {
+      //     description.innerHTML = "Show Korean Text";
+      //   }
+      //   else {
+      //     description.innerHTML = "Show English Text";
+      //   }
+      // }
+    </script>
   </body>
 </html>

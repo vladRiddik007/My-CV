@@ -14,4 +14,4 @@ const transition = () => {
   setTimeout(() => {
     document.documentElement.classList.remove("transition");
   }, 400);
-}
+};
