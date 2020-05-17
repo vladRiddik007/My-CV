@@ -167,6 +167,10 @@ input:checked + .slider:before {
           transform: translateX(26px);
 }
 
+.slider.transform {
+  background-color: var(--primary-color);
+}
+
 .slider.round {
   border-radius: 50px;
 }

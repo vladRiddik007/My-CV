@@ -2,12 +2,15 @@
 
 const html = document.getElementsByTagName('html');
 const input = document.getElementById('slider');
-
-html[0].dataset.theme = localStorage.theme;
-
-let toggle = document
+const toggle = document
   .getElementById('theme-switch__toggle')
   .addEventListener('change', changeTheme);
+
+if (localStorage.theme) {
+  html[0].dataset.theme = localStorage.theme;
+} else {
+  html[0].dataset.theme = 'light';
+}
 
 if (html[0].dataset.theme === 'dark') {
   input.classList.add('transform');
@@ -28,7 +31,6 @@ function changeTheme() {
     );
     window.localStorage.setItem('theme', html[0].dataset.theme);
   }
-  //====================i have a question====================
   if (input.classList.contains('transform')) {
     input.classList.remove('transform');
   }
