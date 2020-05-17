@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,18 +7,29 @@
     <title>My CV</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body >
     <div class="container">
       <header>
         <div>
-          <h1>Vladyslav Sidikov</h1>
-          <h2>Junior Front End Developer</h2>
+          <h1 id="name">Vladyslav Sidikov</h1>
+          <h2 id="job">Junior Front End Developer</h2>
+        </div>
+
+        <div class="lang">
+          <button class="translate" id="e-lang-en">En</button>
+          <button class="translate" id="e-lang-ru">Ru</button>
+          <!-- <button class="translate" id="en" onclick="changeLang(en)">
+            En
+          </button>
+          <button class="translate" id="ru" onclick="changeLang(ru)">
+            Ru
+          </button> -->
         </div>
 
         <div class="theme-switch-wrapper">
           <label class="theme-switch">
             <input type="checkbox" id="theme-switch__toggle" />
-            <div class="slider round"></div>
+            <div id="slider" class="slider round"></div>
           </label>
         </div>
       </header>
@@ -122,56 +133,8 @@
           </ul>
         </div>
       </main>
-
-      <!-- <div> -->
-        <!-- <h1 id="description"></h1>
-        <ul>
-          <button onclick="toggleLanguage('English')">En</button>
-          <button onclick="toggleLanguage('Korean')">Ru</button>
-        </ul> -->
-
-        <!-- <a href="#eng" data-reload>EN</a>
-        <a href="#es" data-reload>RU</a>
-        <p id="hi">Welcome</p> -->
-
-      <!-- </div> -->
     </div>
 
-    <script src="script.js">
-
-      //===========================================
-      var dataReload = document.querySelectorAll("[data-reload]");
-
-      var language = {
-        eng: {
-          welcome: 'welcome'
-        },
-        es: {
-          welcome: 'Добро'
-        }
-      };
-
-      if (window.location.hash) {
-        if (window.location.hash === "/#es") {
-          hi.textContent = language.es.welcome;
-        }
-      }
-
-      for (i = 0; i <= dataReload.length; i++) {
-        dataReload[i].onclick = function() {
-          location.reload(true);
-        };
-      }
-      //===========================================
-      // function toggleLanguage(language) {
-      //   let description = document.getElementById("description");
-      //   if (language === "Korean") {
-      //     description.innerHTML = "Show Korean Text";
-      //   }
-      //   else {
-      //     description.innerHTML = "Show English Text";
-      //   }
-      // }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
